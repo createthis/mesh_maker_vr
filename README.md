@@ -20,6 +20,10 @@ The included code is MIT Licensed. However, the integration tests use a Pikachu 
 
 Low-Poly Pikachu by FLOWALISTIK is licensed under the Creative Commons - Attribution - Non-Commercial - Share Alike license.
 
+# Chat
+
+Slack channel: [meshmakervr](https://meshmakervr.slack.com) [(Join link)](https://meshmakervr.slack.com/signup)
+
 # Patreon
 
 Love this project and want to help it be successful? Support us on Patreon, today: [Mesh Maker VR Patreon Page](https://www.patreon.com/createthis)
