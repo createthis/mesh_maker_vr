@@ -12,7 +12,7 @@ Unity Asset Store Dependencies:
 * TheLabRenderer (I'm pretty sure we're not using this, but it may be required by the scene)
 * Free Sunset skybox (skyb1)
 
-This project also requires the CreateThis VR UI project. It's available on github. Just copy over the Assets/CreateThis folder into the Assets directory.
+This project also requires the CreateThis VR UI project. It's available [here](https://github.com/createthis/createthis_vr_ui) on github. Just copy over the Assets/CreateThis folder into the Assets directory.
 
 # Licensing
 
