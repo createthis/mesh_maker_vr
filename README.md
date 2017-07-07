@@ -1,5 +1,7 @@
 This is the full source code to Mesh Maker VR.
 
+NOTE: This is the development version of Mesh Maker VR, not the production version. We were in the middle of a massive refactor when we decided to release MMVR as open source, so the code is a lot cleaner than the production code. However, reference images and alignment tools are broken. We were in the middle of re-implementing these as 2.0 versions with additional features. Everything else should work as expected.
+
 # Dependencies
 
 Unity Asset Store Dependencies:
