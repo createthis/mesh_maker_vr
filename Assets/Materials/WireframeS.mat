@@ -1,0 +1,298 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: WireframeS
+  m_Shader: {fileID: 4800000, guid: 2f762f60a3f7f7b44aa1148e89ed95b2, type: 3}
+  m_ShaderKeywords: V_WIRE_DYNAMIC_MASK_OFF V_WIRE_LIGHT_OFF _EMISSION
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailAlbedoMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailMask
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailNormalMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _EmissionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MetallicGlossMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _OcclusionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ParallaxMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _V_WIRE_AoMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _V_WIRE_NormalMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _V_WIRE_SourceTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _V_WIRE_WireTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _BumpScale
+      second: 1
+    - first:
+        name: _Cull
+      second: 0
+    - first:
+        name: _Cutoff
+      second: 0.5
+    - first:
+        name: _DetailNormalMapScale
+      second: 1
+    - first:
+        name: _DstBlend
+      second: 0
+    - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
+        name: _Glossiness
+      second: 0.5
+    - first:
+        name: _GlossyReflections
+      second: 1
+    - first:
+        name: _Metallic
+      second: 0
+    - first:
+        name: _Mode
+      second: 0
+    - first:
+        name: _NHeight
+      second: 0.1
+    - first:
+        name: _NScale
+      second: 0.01
+    - first:
+        name: _OcclusionStrength
+      second: 1
+    - first:
+        name: _Parallax
+      second: 0.02
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 1
+    - first:
+        name: _SrcBlend
+      second: 1
+    - first:
+        name: _UVSec
+      second: 0
+    - first:
+        name: _V_WIRE_Ao
+      second: 0
+    - first:
+        name: _V_WIRE_AoStrength
+      second: 1
+    - first:
+        name: _V_WIRE_BumpEnumID
+      second: 0
+    - first:
+        name: _V_WIRE_DistanceFade
+      second: 0
+    - first:
+        name: _V_WIRE_DistanceFadeEnd
+      second: 10
+    - first:
+        name: _V_WIRE_DistanceFadeStart
+      second: 5
+    - first:
+        name: _V_WIRE_DynamicGI
+      second: 0
+    - first:
+        name: _V_WIRE_DynamicGIEnumID
+      second: 0
+    - first:
+        name: _V_WIRE_DynamicGIStrength
+      second: 0
+    - first:
+        name: _V_WIRE_DynamicMaskEffectsBaseTexEnumID
+      second: 0
+    - first:
+        name: _V_WIRE_DynamicMaskEffectsBaseTexInvert
+      second: 0
+    - first:
+        name: _V_WIRE_DynamicMaskEnumID
+      second: 0
+    - first:
+        name: _V_WIRE_DynamicMaskInvert
+      second: -1
+    - first:
+        name: _V_WIRE_DynamicMaskSmooth
+      second: 1
+    - first:
+        name: _V_WIRE_DynamicMaskType
+      second: 1
+    - first:
+        name: _V_WIRE_EmissionStrength
+      second: 0
+    - first:
+        name: _V_WIRE_FixedSize
+      second: 0
+    - first:
+        name: _V_WIRE_FresnelBias
+      second: 0
+    - first:
+        name: _V_WIRE_FresnelEnumID
+      second: 0
+    - first:
+        name: _V_WIRE_FresnelInvert
+      second: 0
+    - first:
+        name: _V_WIRE_FresnelPow
+      second: 1
+    - first:
+        name: _V_WIRE_ImprovedBlendEnumID
+      second: 0
+    - first:
+        name: _V_WIRE_IncludeLightEnumID
+      second: 0
+    - first:
+        name: _V_WIRE_NormalScale
+      second: 1
+    - first:
+        name: _V_WIRE_RenderingOptions_PBREnumID
+      second: 0
+    - first:
+        name: _V_WIRE_Size
+      second: 1
+    - first:
+        name: _V_WIRE_Source_Options
+      second: 0
+    - first:
+        name: _V_WIRE_Tag
+      second: 0
+    - first:
+        name: _V_WIRE_Title_M_Options
+      second: 0
+    - first:
+        name: _V_WIRE_Title_S_Options
+      second: 0
+    - first:
+        name: _V_WIRE_Title_V_Options
+      second: 0
+    - first:
+        name: _V_WIRE_Title_W_Options
+      second: 0
+    - first:
+        name: _V_WIRE_TransparencyEnumID
+      second: 0
+    - first:
+        name: _V_WIRE_Transparency_M_Options
+      second: 0
+    - first:
+        name: _V_WIRE_TransparentTex_Alpha_Offset
+      second: 0
+    - first:
+        name: _V_WIRE_TransparentTex_Invert
+      second: 0
+    - first:
+        name: _V_WIRE_TryQuad
+      second: 0
+    - first:
+        name: _V_WIRE_VertexColor
+      second: 0
+    - first:
+        name: _V_WIRE_WireTex_UVSet
+      second: 0
+    - first:
+        name: _V_WIRE_WireVertexColor
+      second: 0
+    - first:
+        name: _ZWrite
+      second: 1
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 0}
+    - first:
+        name: _EmissionColor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _NColor
+      second: {r: 0.082352914, g: 1, b: 0.23921564, a: 1}
+    - first:
+        name: _V_WIRE_Color
+      second: {r: 0.082352914, g: 1, b: 0.23921564, a: 1}
+    - first:
+        name: _V_WIRE_MainTex_Scroll
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _V_WIRE_ObjectWorldPos
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _V_WIRE_SourceTex_Scroll
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _V_WIRE_WireTex_Scroll
+      second: {r: 0, g: 0, b: 0, a: 0}

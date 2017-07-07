@@ -1,0 +1,23 @@
+# Mesh Maker VR
+newmtl Material_#C433C500
+Ka 1 1 1
+Kd 0.7686275 0.2 0.772549
+Ks 0.5 0.5 0.5
+Tf 1 1 1
+Ke 0 0 0
+Ns 96.07843
+Ni 1
+d 1
+illum 2
+
+newmtl Material_#FFF50200
+Ka 1 1 1
+Kd 1 0.9616356 0.006606042
+Ks 0.5 0.5 0.5
+Tf 1 1 1
+Ke 0 0 0
+Ns 96.07843
+Ni 1
+d 1
+illum 2
+
