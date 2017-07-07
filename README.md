@@ -6,7 +6,7 @@ NOTE: This is the development version of Mesh Maker VR, not the production versi
 
 Unity Asset Store Dependencies:
 * ProBuilder (free version - I'm pretty sure we're not using this, but it may be required by the scene)
-* VR Gimbal Camera (required by the scene)
+* VR Gimbal Camera (required by the scene, but not really necessary. Feel free to remove it.)
 * SteamVR
 * Simple Color Picker
 * UnityTestTools (necessary to run integration tests)
