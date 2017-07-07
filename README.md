@@ -19,3 +19,7 @@ This project also requires the CreateThis VR UI project. It's available on githu
 The included code is MIT Licensed. However, the integration tests use a Pikachu model with the following license:
 
 Low-Poly Pikachu by FLOWALISTIK is licensed under the Creative Commons - Attribution - Non-Commercial - Share Alike license.
+
+# Patreon
+
+Love this project and want to help it be successful? Support us on Patreon, today: [Mesh Maker VR Patreon Page](https://www.patreon.com/createthis)
