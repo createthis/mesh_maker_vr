@@ -12,7 +12,7 @@ Unity Asset Store Dependencies:
 * UnityTestTools (necessary to run integration tests)
 
   Note that UnityTestTools is slightly broken in modern Unity. Fix it by deleting the test that contains ExpectedException:
-  ```diff
+```diff
 diff -urwb Assets/UnityTestTools/Examples/UnitTestExamples/Editor/SampleTests.cs "../Mesh Maker VR/Assets/UnityTestTools/Examples/UnitTestExamples/Editor/SampleTests.cs"
 --- Assets/UnityTestTools/Examples/UnitTestExamples/Editor/SampleTests.cs       2016-09-12 09:38:58.000000000 -0400
 +++ "../Mesh Maker VR/Assets/UnityTestTools/Examples/UnitTestExamples/Editor/SampleTests.cs"    2017-04-17 10:51:57.137423000 -0400
