@@ -1,0 +1,213 @@
+diff -Nruwb '--exclude=*.unity' '--exclude=*.mat' '--exclude=*.anim' '--exclude=*.prefab' "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Diffuse.shader" "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Diffuse.shader"
+--- "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Diffuse.shader"	2017-07-08 00:40:20.795537100 -0400
++++ "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Diffuse.shader"	2017-04-17 10:37:04.014921000 -0400
+@@ -7,6 +7,11 @@
+ { 
+ 	Properties         
+ 	{   
++		//Wire Normal Options
++		_NColor("Color", color) = (0, 0, 0, 1)
++		_NHeight("Height", float) = 0.1
++		_NScale("Scale", float) = 0.01
++
+ 		//Tag         
+ 		[V_WIRE_Tag] _V_WIRE_Tag("", float) = 0 
+ 		 
+@@ -998,7 +1003,7 @@
+ 
+ }
+ 
+-
++		UsePass "GeometryNormal/MAIN"
+ 
+ 	}
+ 
+diff -Nruwb '--exclude=*.unity' '--exclude=*.mat' '--exclude=*.anim' '--exclude=*.prefab' "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader" "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader"
+--- "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader"	1969-12-31 19:00:00.000000000 -0500
++++ "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader"	2017-04-07 19:12:41.107563500 -0400
+@@ -0,0 +1,134 @@
++﻿Shader "GeometryNormal"
++{
++	Properties
++	{		
++		_NColor("Color", color) = (0, 1 ,0, 1)
++		_NHeight("Hight", float) = 0.1
++		_NScale("Scale", float) = 0.01
++	}
++
++	SubShader
++	{
++		Tags { "RenderType"="Opaque" }
++		LOD 100
++
++		Pass
++		{
++			Name "Main"
++
++			CGPROGRAM
++			#pragma vertex vert
++			#pragma geometry geom
++			#pragma fragment frag
++			
++			#include "UnityCG.cginc"
++			#pragma target 4.6
++
++
++			struct appdata
++			{
++				float4 vertex : POSITION;
++			};
++
++			struct v2f
++			{
++				float4 vertex : SV_POSITION;
++				float4 color : COLOR;
++			};
++			
++			
++			v2f vert (appdata v)
++			{
++				v2f o;
++
++				o.vertex = v.vertex;
++				o.color = 1;
++
++				return o;
++			}
++
++
++			fixed4 _NColor;
++			float _NHeight;
++			float _NScale;
++
++
++			[maxvertexcount(9)]
++			void geom(triangle v2f input[3], inout TriangleStream<v2f> triStream)
++			{
++
++				float3 v0 = input[0].vertex.xyz;
++				float3 v1 = input[1].vertex.xyz;
++				float3 v2 = input[2].vertex.xyz;
++
++				float3 centerPoint = (v0 + v1 + v2) / 3.0;
++				float3 normal = normalize(cross((v1 - v0), (v2 - v0)));
++
++								
++				float3 heightPoint = centerPoint + normal * _NHeight;
++				
++				
++				float3 a = centerPoint + normalize(v0 - centerPoint) * _NScale;
++				float3 b = centerPoint + normalize(v1 - centerPoint) * _NScale;
++				float3 c = centerPoint + normalize(v2 - centerPoint) * _NScale;
++
++				float4 A  = UnityObjectToClipPos(a);
++				float4 B  = UnityObjectToClipPos(b);
++				float4 C  = UnityObjectToClipPos(c);
++				float4 HP = UnityObjectToClipPos(heightPoint);
++
++
++				v2f output;
++				output.color = _NColor;  //float4(UnityObjectToWorldNormal(normal), 1);
++
++				//#1/////////////////////////////////////////////////////				
++				output.vertex = A;
++				triStream.Append(output);
++
++				output.vertex = B;
++				triStream.Append(output);				
++
++				output.vertex = HP;
++				triStream.Append(output);
++
++
++				triStream.RestartStrip();
++
++
++				//#2/////////////////////////////////////////////////////
++				output.vertex = C;
++				triStream.Append(output);
++
++				output.vertex = A;
++				triStream.Append(output);
++
++				output.vertex = HP;
++				triStream.Append(output);
++
++
++				triStream.RestartStrip();
++
++
++				//#3/////////////////////////////////////////////////////	
++				output.vertex = B;
++				triStream.Append(output);
++
++				output.vertex = C;
++				triStream.Append(output);
++
++				output.vertex = HP;
++				triStream.Append(output);
++
++
++				triStream.RestartStrip();
++			}
++
++			
++			fixed4 frag (v2f i) : SV_Target
++			{
++				return i.color;
++			}
++			ENDCG
++		}
++	}
++}
+diff -Nruwb '--exclude=*.unity' '--exclude=*.mat' '--exclude=*.anim' '--exclude=*.prefab' "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader.meta" "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader.meta"
+--- "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader.meta"	1969-12-31 19:00:00.000000000 -0500
++++ "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader.meta"	2017-04-07 19:15:57.728403500 -0400
+@@ -0,0 +1,9 @@
++fileFormatVersion: 2
++guid: acf591d6f40c25b45ac03bf36a833ddc
++timeCreated: 1491606957
++licenseType: Free
++ShaderImporter:
++  defaultTextures: []
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+diff -Nruwb '--exclude=*.unity' '--exclude=*.mat' '--exclude=*.anim' '--exclude=*.prefab' "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Transparent Simple Diffuse.shader" "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Transparent Simple Diffuse.shader"
+--- "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Transparent Simple Diffuse.shader"	2017-07-08 00:59:51.230802900 -0400
++++ "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Transparent Simple Diffuse.shader"	2017-04-17 10:37:04.084078100 -0400
+@@ -7,6 +7,11 @@
+ {
+ 	Properties
+ 	{
++		//Wire Normal Options
++		_NColor("Color", color) = (0, 0, 0, 1)
++		_NHeight("Height", float) = 0.1
++		_NScale("Scale", float) = 0.01
++
+ 		//Tag         
+ 		[V_WIRE_Tag] _V_WIRE_Tag("", float) = 0
+ 
+@@ -572,6 +577,8 @@
+ 
+ 	}
+ 
++		UsePass "GeometryNormal/MAIN"
++
+ 	}
+ 
+ 		FallBack "Hidden/VacuumShaders/The Amazing Wireframe/Mobile/Vertex Lit/Transparent/Full"
+diff -Nruwb '--exclude=*.unity' '--exclude=*.mat' '--exclude=*.anim' '--exclude=*.prefab' "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders.meta" "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders.meta"
+--- "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders.meta"	2017-04-02 04:30:06.000000000 -0400
++++ "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders.meta"	2017-04-14 08:56:26.967531100 -0400
+@@ -1,5 +1,9 @@
+ fileFormatVersion: 2
+-guid: 71a0d8c1b29021542af555a9f9bde133
++guid: c6ccb5fd68f77f44ea6f589aab678547
+ folderAsset: yes
++timeCreated: 1492174586
++licenseType: Free
+ DefaultImporter:
+   userData: 
++  assetBundleName: 
++  assetBundleVariant: 
