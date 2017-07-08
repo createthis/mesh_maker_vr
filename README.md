@@ -13,7 +13,7 @@ Unity Asset Store Dependencies:
 * Simple Color Picker
 * UnityTestTools (necessary to run integration tests)
 
-  Note that UnityTestTools is slightly broken in modern Unity. Fix it by deleting the test that contains ExpectedException. I've included a patch to do this quickly and easily:
+  Note that UnityTestTools is slightly broken in modern Unity. Fix it by deleting the test that contains ExpectedException. I've included a patch to do this quickly and easily from git bash on windows:
 ```bash
 patch -p2 < UnityTestTools.patch
 ```
