@@ -33,6 +33,7 @@ diff -urwb Assets/UnityTestTools/Examples/UnitTestExamples/Editor/SampleTests.cs
 ```
 
 * The Amazing Wireframe Shader (Note that this takes 30 minutes to compile on a 6700k i7 with 32 gb of ram. I have no idea why. It's a good asset otherwise.)
+
   Note that I've included a patch to The Amazing Wireframe Shader that adds face normals. To install:
 ```bash
 patch -p2 --binary < VacuumShaders_Add_Face_Normals.patch
