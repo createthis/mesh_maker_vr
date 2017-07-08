@@ -10,6 +10,28 @@ Unity Asset Store Dependencies:
 * SteamVR
 * Simple Color Picker
 * UnityTestTools (necessary to run integration tests)
+
+  Note that UnityTestTools is slightly broken in modern Unity. Fix it by deleting the test that contains ExpectedException:
+  ```diff
+diff -urwb Assets/UnityTestTools/Examples/UnitTestExamples/Editor/SampleTests.cs "../Mesh Maker VR/Assets/UnityTestTools/Examples/UnitTestExamples/Editor/SampleTests.cs"
+--- Assets/UnityTestTools/Examples/UnitTestExamples/Editor/SampleTests.cs       2016-09-12 09:38:58.000000000 -0400
++++ "../Mesh Maker VR/Assets/UnityTestTools/Examples/UnitTestExamples/Editor/SampleTests.cs"    2017-04-17 10:51:57.137423000 -0400
+@@ -70,13 +70,6 @@
+         {
+         }
+
+-        [Test]
+-        [ExpectedException(typeof(ArgumentException), ExpectedMessage = "expected message")]
+-        public void ExpectedExceptionTest()
+-        {
+-            throw new ArgumentException("expected message");
+-        }
+-
+         [Datapoint]
+         public double zero = 0;
+         [Datapoint]
+```
+
 * The Amazing Wireframe Shader (Note that this takes 30 minutes to compile on a 6700k i7 with 32 gb of ram. I have no idea why. It's a good asset otherwise.)
 * TheLabRenderer (I'm pretty sure we're not using this, but it may be required by the scene)
 * Free Sunset skybox (skyb1)
