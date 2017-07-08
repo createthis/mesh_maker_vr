@@ -10,7 +10,7 @@ Unity Asset Store Dependencies:
 * SteamVR
 * Simple Color Picker
 * UnityTestTools (necessary to run integration tests)
-* The Amazing Wireframe Shader
+* The Amazing Wireframe Shader (Note that this takes 30 minutes to compile on a 6700k i7 with 32 gb of ram. I have no idea why. It's a good asset otherwise.)
 * TheLabRenderer (I'm pretty sure we're not using this, but it may be required by the scene)
 * Free Sunset skybox (skyb1)
 
