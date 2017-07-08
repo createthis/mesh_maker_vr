@@ -4,6 +4,8 @@ NOTE: This is the development version of Mesh Maker VR, not the production versi
 
 # Dependencies
 
+This project currently uses Unity 5.6.2f1. Get it here: [https://store.unity.com](https://store.unity.com)
+
 Unity Asset Store Dependencies:
 * ProBuilder (free version - I'm pretty sure we're not using this, but it may be required by the scene)
 * VR Gimbal Camera (required by the scene, but not really necessary. Feel free to remove it.)
