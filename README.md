@@ -43,4 +43,4 @@ Slack channel: [meshmakervr](https://meshmakervr.slack.com) [(Join link)](https:
 
 Love this project and want to help it be successful? Support us on Patreon, today: [Mesh Maker VR Patreon Page](https://www.patreon.com/createthis)
 
-NOTE: Before this project was open sourced it was making about $348 per month on Steam. If we reach that goal in Patreon pledges development will continue unchanged.
+**NOTE: Before this project was open sourced it was making about $348 per month on Steam. If we reach that goal in Patreon pledges development will continue unchanged.**
