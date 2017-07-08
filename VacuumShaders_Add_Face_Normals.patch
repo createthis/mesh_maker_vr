@@ -160,19 +160,6 @@ diff -Nruwb '--exclude=*.unity' '--exclude=*.mat' '--exclude=*.anim' '--exclude=
 +		}
 +	}
 +}
-diff -Nruwb '--exclude=*.unity' '--exclude=*.mat' '--exclude=*.anim' '--exclude=*.prefab' "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader.meta" "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader.meta"
---- "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader.meta"	1969-12-31 19:00:00.000000000 -0500
-+++ "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/GeometryNormal.shader.meta"	2017-04-07 19:15:57.728403500 -0400
-@@ -0,0 +1,9 @@
-+fileFormatVersion: 2
-+guid: acf591d6f40c25b45ac03bf36a833ddc
-+timeCreated: 1491606957
-+licenseType: Free
-+ShaderImporter:
-+  defaultTextures: []
-+  userData: 
-+  assetBundleName: 
-+  assetBundleVariant: 
 diff -Nruwb '--exclude=*.unity' '--exclude=*.mat' '--exclude=*.anim' '--exclude=*.prefab' "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Transparent Simple Diffuse.shader" "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Transparent Simple Diffuse.shader"
 --- "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Transparent Simple Diffuse.shader"	2017-07-08 00:59:51.230802900 -0400
 +++ "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders/Geometry Shader/Transparent Simple Diffuse.shader"	2017-04-17 10:37:04.084078100 -0400
@@ -197,17 +184,3 @@ diff -Nruwb '--exclude=*.unity' '--exclude=*.mat' '--exclude=*.anim' '--exclude=
  	}
  
  		FallBack "Hidden/VacuumShaders/The Amazing Wireframe/Mobile/Vertex Lit/Transparent/Full"
-diff -Nruwb '--exclude=*.unity' '--exclude=*.mat' '--exclude=*.anim' '--exclude=*.prefab' "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders.meta" "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders.meta"
---- "Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders.meta"	2017-04-02 04:30:06.000000000 -0400
-+++ "../Mesh Maker VR/Assets/VacuumShaders/The Amazing Wireframe Shader/Shaders.meta"	2017-04-14 08:56:26.967531100 -0400
-@@ -1,5 +1,9 @@
- fileFormatVersion: 2
--guid: 71a0d8c1b29021542af555a9f9bde133
-+guid: c6ccb5fd68f77f44ea6f589aab678547
- folderAsset: yes
-+timeCreated: 1492174586
-+licenseType: Free
- DefaultImporter:
-   userData: 
-+  assetBundleName: 
-+  assetBundleVariant: 
