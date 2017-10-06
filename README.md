@@ -37,7 +37,7 @@ Low-Poly Pikachu by FLOWALISTIK is licensed under the Creative Commons - Attribu
 
 # Chat
 
-Slack channel: [meshmakervr](https://meshmakervr.slack.com) [(Join link)](https://meshmakervr.slack.com/signup)
+Slack channel: [meshmakervr](https://meshmakervr.slack.com) [(Join link)](https://join.slack.com/t/meshmakervr/shared_invite/enQtMjUyNDA4MTgxNTQxLTQwMmQzMDQzODUwYjdjOGVlMDRkY2NmZjczNWUzZGJkMjhkMzg3ZGM5YjBlMDZkOTAyMWNlYzhjYTNkOGY1YWU)
 
 # Patreon
 
